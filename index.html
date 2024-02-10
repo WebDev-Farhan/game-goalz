@@ -25,7 +25,7 @@
     <!-- Header Starts -->
     <header class="mx-auto container">
       <!-- Nav Starts -->
-      <nav>
+      <nav class="xl:px-10 pr-1 md:pr-2 lg:pr-3">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
             <div class="dropdown">
@@ -56,17 +56,21 @@
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost font-extrabold text-2xl md:text-4xl"
+            <a class="btn btn-ghost font-extrabold text-2xl md:text-4xl" href=""
               >Game <span class="text-primary">Goalz</span></a
             >
           </div>
-          <div class="navbar-center hidden  lg:flex">
-            <ul class="menu menu-horizontal px-1 ">
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
               <li><a href="#home" class="text-primary xl:text-xl">Home</a></li>
-              <li><a href="#about " class="text-[#424247] xl:text-xl">About</a></li>
-              <li><a href="#"class="text-[#424247] xl:text-xl">Pages</a></li>
-              <li><a href="#"class="text-[#424247] xl:text-xl">Blog</a></li>
-              <li><a href="#contact"class="text-[#424247] xl:text-xl">Contact</a></li>
+              <li>
+                <a href="#about " class="text-[#424247] xl:text-xl">About</a>
+              </li>
+              <li><a href="#" class="text-[#424247] xl:text-xl">Pages</a></li>
+              <li><a href="#" class="text-[#424247] xl:text-xl">Blog</a></li>
+              <li>
+                <a href="#contact" class="text-[#424247] xl:text-xl">Contact</a>
+              </li>
             </ul>
           </div>
           <div class="navbar-end space-x-5">
@@ -93,6 +97,58 @@
         </div>
       </nav>
       <!-- Nav Ends -->
+      <!-- Banner Section Starts -->
+      <div class="banner px-5 container mx-auto">
+        <!-- Carousel Section -->
+        <div class="carousel w-full h-56 md:h-[500px] lg:h-[500px] xl:h-[500px]">
+          <!-- slide-1 -->
+          <div
+            id="slide1"
+            class="carousel-item relative w-full flex justify-center mx-10"
+          >
+            <img src="./assets/Images/slider1.png" class="w-full" />
+            <div
+              class="absolute flex justify-start gap-4 transform -translate-y-1/2 left-5 right-5 -bottom-2"
+            >
+              <a
+                href="#slide2"
+                class="btn bottom-5 btn-circle text-white bg-secondary"
+                >❮</a
+              >
+              <a href="#slide2" class="btn text-white btn-circle bg-secondary"
+                >❯</a
+              >
+            </div>
+          </div>
+          <!-- Slide2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./assets/Images/slider1.png" class="w-full" />
+            <div
+              class="absolute flex justify-start gap-4 transform -translate-y-1/2 left-5 right-5 -bottom-2"
+            >
+              <a
+                href="#slide1"
+                class="btn bottom-5 btn-circle text-white bg-secondary"
+                >❮</a
+              >
+              <a href="#slide1" class="btn text-white btn-circle bg-secondary"
+                >❯</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-white flex flex-col items-start p-4 rounded-2xl text-left z-10 md:p-4 md:w-[400px] md:relative md:left-80 md:bottom-44 lg:p-4 lg:w-[450px] lg:relative  lg:left-[33rem] lg:bottom-44 xl:p-8 xl:w-[566px] xl:relative xl:left-[41rem] xl:bottom-56 2xl:w-[600px] 2xl:left-[55rem]"
+        >
+          <h3 class="text-lg md:text-xl lg:text-xl xl:text-2xl font-extrabold mb-4">
+            Meet all the heroes from the field
+          </h3>
+          <p class="text-white text-opacity-60 text-sm md:text-base lg:text-base xl:text-base 2xl:text-xl">
+            Unite with champions of the field & embrace the thrill of gaming prowess! Join us to encounter the true heroes in action!
+          </p>
+        </div>
+      </div>
+      <!-- Banner Section Ends -->
     </header>
     <!-- Header Ends -->
   </body>
