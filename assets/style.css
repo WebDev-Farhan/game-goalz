@@ -1062,6 +1062,38 @@ html {
   display: none;
 }
 
+.hero {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.hero-overlay {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
+  --tw-bg-opacity: 0.5;
+}
+
+.hero-content {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .join .dropdown .join-item:first-child:not(:last-child),
   .join *:first-child:not(:last-child) .dropdown .join-item {
   border-start-end-radius: inherit;
@@ -1738,6 +1770,14 @@ html {
   margin-top: 0.75rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1762,6 +1802,10 @@ html {
   width: 1.5rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1772,6 +1816,10 @@ html {
 
 .max-w-72 {
   max-width: 18rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .-translate-y-1\/2 {
@@ -1838,6 +1886,10 @@ html {
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(19 19 24 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
 }
 
 .p-2 {
@@ -1936,6 +1988,11 @@ html {
   color: rgb(255 181 70 / var(--tw-text-opacity));
 }
 
+.text-neutral-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(255 66 64 / var(--tw-text-opacity));
@@ -1978,8 +2035,20 @@ html {
     left: 20rem;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .md\:mb-24 {
     margin-bottom: 6rem;
+  }
+
+  .md\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .md\:mt-52 {
+    margin-top: 13rem;
   }
 
   .md\:block {
@@ -1990,8 +2059,16 @@ html {
     height: 536px;
   }
 
+  .md\:w-\[24rem\] {
+    width: 24rem;
+  }
+
   .md\:w-\[400px\] {
     width: 400px;
+  }
+
+  .md\:w-\[50rem\] {
+    width: 50rem;
   }
 
   .md\:max-w-\[36rem\] {
@@ -2048,8 +2125,20 @@ html {
     left: 33rem;
   }
 
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .lg\:mb-24 {
     margin-bottom: 6rem;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .lg\:mt-52 {
+    margin-top: 13rem;
   }
 
   .lg\:block {
@@ -2068,8 +2157,20 @@ html {
     height: 536px;
   }
 
+  .lg\:w-\[30rem\] {
+    width: 30rem;
+  }
+
+  .lg\:w-\[34rem\] {
+    width: 34rem;
+  }
+
   .lg\:w-\[450px\] {
     width: 450px;
+  }
+
+  .lg\:w-\[65rem\] {
+    width: 65rem;
   }
 
   .lg\:max-w-\[36rem\] {
@@ -2121,16 +2222,36 @@ html {
     left: 41rem;
   }
 
+  .xl\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .xl\:mb-24 {
     margin-bottom: 6rem;
+  }
+
+  .xl\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .xl\:mt-52 {
+    margin-top: 13rem;
   }
 
   .xl\:h-\[536px\] {
     height: 536px;
   }
 
+  .xl\:w-\[36rem\] {
+    width: 36rem;
+  }
+
   .xl\:w-\[566px\] {
     width: 566px;
+  }
+
+  .xl\:w-\[73\.13rem\] {
+    width: 73.13rem;
   }
 
   .xl\:max-w-\[36rem\] {
@@ -2159,6 +2280,11 @@ html {
     line-height: 2rem;
   }
 
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2180,12 +2306,32 @@ html {
     left: 55rem;
   }
 
+  .\32xl\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .\32xl\:mb-24 {
     margin-bottom: 6rem;
   }
 
+  .\32xl\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .\32xl\:mt-52 {
+    margin-top: 13rem;
+  }
+
+  .\32xl\:w-\[36rem\] {
+    width: 36rem;
+  }
+
   .\32xl\:w-\[600px\] {
     width: 600px;
+  }
+
+  .\32xl\:w-\[73\.13rem\] {
+    width: 73.13rem;
   }
 
   .\32xl\:max-w-\[36rem\] {
@@ -2200,9 +2346,19 @@ html {
     gap: 6rem;
   }
 
+  .\32xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .\32xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .\32xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .\32xl\:text-xl {
